@@ -46,7 +46,7 @@ cp .config/i3/config ~/.config/i3/config
 
 cp .fehbg ~/.fehbg
 mkdir -p ~/.wallpaper
-cp ~/kali-setup/wallpaper.jpeg ~/.wallpaper/wallpaper.jpeg
+cp ~/kali-setup/wallpaper.jpg ~/.wallpaper/wallpaper.jpg
 
 cp .config/i3/clipboard_fix.sh ~/.config/i3/clipboard_fix.sh
 
