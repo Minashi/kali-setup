@@ -85,6 +85,9 @@ matches:
 
   - trigger: ":dirsearch"
     replace: "dirsearch -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 64 -e php,txt,html -f -u "
+    
+  - trigger: ":gobuster"
+    replace: "gobuster dir -w /usr/share/wordlists/dirb/common.txt -e php,txt,html -u http://"
 
 # REVERSE SHELLS                                                                
   # LINUX
